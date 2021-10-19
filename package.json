@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/athaight/fantastic-fitness#readme",
   "dependencies": {
+    "clog": "^0.1.6",
     "express": "^4.17.1",
     "mongoose": "^6.0.11",
     "morgan": "^1.10.0",
