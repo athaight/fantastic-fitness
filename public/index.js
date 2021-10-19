@@ -1,7 +1,7 @@
 init();
 
 async function init() {
-  if (location.search.split("=")[1] === undefined) {
+  if (location.search.split("=")[0] === undefined) {
     const workout = await API.getLastWorkout();
     if (workout) {
       location.search = "?id=" + workout._id;
