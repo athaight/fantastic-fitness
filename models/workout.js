@@ -10,12 +10,12 @@ const workoutSchema = new Schema({
       {
     type: {
         type: String,
-        required: "Type"
+        required: "Type required"
     },
     name: {
         type: String,
         trim: true,
-        required: "Name"
+        required: "Name required"
     },
     weight: {
         type: Number,
@@ -28,16 +28,17 @@ const workoutSchema = new Schema({
     },
     duration: {
         type: Number,
+        required: "Duration required"
     },
     },
 ]
 });
 
-workoutSchema.methods.setTotalDuration = function () {
-    return this.exercises.reduce((total, exercise) => {
-        return total + exercise.duration;
-      }, 0);
-    };
+// workoutSchema.methods.setTotalDuration = function () {
+//     return this.exercises.reduce((total, exercise) => {
+//         return total + exercise.duration;
+//       }, 0);
+//     };
     
 const Workout = mongoose.model("Workout", workoutSchema);
 
